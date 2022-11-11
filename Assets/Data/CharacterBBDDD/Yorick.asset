@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02759fddb6f276d4d9b5fbd31c40cf03, type: 3}
+  m_Name: Yorick
+  m_EditorClassIdentifier: 
+  Name: Yorick
+  Text: "William Yorick nunca quiso ser sepulturero. Se hab\xEDa formado para ser
+    actor y hab\xEDa trabajado durante a\xF1os en Boston, interpretando todos los
+    papeles disponibles. Shakespeare era lo mejor, por supuesto, pero despu\xE9s
+    de muchos a\xF1os y casi ning\xFAn papel, se vio obligado a admitir que el escenario
+    no era su destino. Cavar tumbas era un trabajo tedioso, pero los muertos eran
+    una excelente audiencia, ya William siempre le encantaron los soliloquios. El
+    trabajo dio un giro oscuro cuando encontr\xF3 criaturas degeneradas que se com\xEDan
+    a los muertos en sus tumbas. Desde esa noche, Yorick ha mantenido a raya a las
+    criaturas, utilizando todos los medios a su alcance para proteger a los muertos."
+  CharacterModel: {fileID: 21300000, guid: ae7c69313fb421042875e297d68aaa42, type: 3}
+  Deck:
+  - {fileID: 11400000, guid: d52b68e2b68126940a8a2194f10b2422, type: 2}
+  - {fileID: 11400000, guid: d52b68e2b68126940a8a2194f10b2422, type: 2}
+  - {fileID: 11400000, guid: d52b68e2b68126940a8a2194f10b2422, type: 2}
+  - {fileID: 11400000, guid: d52b68e2b68126940a8a2194f10b2422, type: 2}
+  - {fileID: 11400000, guid: d52b68e2b68126940a8a2194f10b2422, type: 2}
+  - {fileID: 11400000, guid: d52b68e2b68126940a8a2194f10b2422, type: 2}
+  - {fileID: 11400000, guid: 72c476355859a544e8bc7a3763207d0e, type: 2}
+  - {fileID: 11400000, guid: 72c476355859a544e8bc7a3763207d0e, type: 2}
+  - {fileID: 11400000, guid: 72c476355859a544e8bc7a3763207d0e, type: 2}
+  - {fileID: 11400000, guid: 72c476355859a544e8bc7a3763207d0e, type: 2}
+  - {fileID: 11400000, guid: 03d55f31f54833c47b5bf02090b6d8e7, type: 2}
+  - {fileID: 11400000, guid: 03d55f31f54833c47b5bf02090b6d8e7, type: 2}
+  - {fileID: 11400000, guid: 03d55f31f54833c47b5bf02090b6d8e7, type: 2}
+  - {fileID: 11400000, guid: 7f9e8c1c02282374b8f477299c1704a4, type: 2}
+  - {fileID: 11400000, guid: 7f9e8c1c02282374b8f477299c1704a4, type: 2}

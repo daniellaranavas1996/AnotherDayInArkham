@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02759fddb6f276d4d9b5fbd31c40cf03, type: 3}
+  m_Name: Agnes
+  m_EditorClassIdentifier: 
+  Name: Agnes
+  Text: "Agnes Baker puede ser solo una mesera sin pretensiones en esta vida, pero
+    en una vida anterior, en un tiempo y una era insospechados en el mundo moderno,
+    hab\xEDa sido una bruja poderosa. Comenz\xF3 cuando encontr\xF3 un artefacto
+    extra\xF1o, una llave de alg\xFAn tipo, en una colecci\xF3n polvorienta de pertenencias
+    familiares en su \xE1tico."
+  CharacterModel: {fileID: 21300000, guid: c7fcb5fa47309e04aa3c7583ed8dc2c7, type: 3}
+  Deck:
+  - {fileID: 11400000, guid: c27292c96e685ef41a4c5c3b3fa2db33, type: 2}
+  - {fileID: 11400000, guid: c27292c96e685ef41a4c5c3b3fa2db33, type: 2}
+  - {fileID: 11400000, guid: c27292c96e685ef41a4c5c3b3fa2db33, type: 2}
+  - {fileID: 11400000, guid: c27292c96e685ef41a4c5c3b3fa2db33, type: 2}
+  - {fileID: 11400000, guid: c27292c96e685ef41a4c5c3b3fa2db33, type: 2}
+  - {fileID: 11400000, guid: d722091bf2b71a34bbe6470aec2ff4e2, type: 2}
+  - {fileID: 11400000, guid: d722091bf2b71a34bbe6470aec2ff4e2, type: 2}
+  - {fileID: 11400000, guid: d0ada58bd4fd71049b345bc22069f3c2, type: 2}
+  - {fileID: 11400000, guid: d0ada58bd4fd71049b345bc22069f3c2, type: 2}
+  - {fileID: 11400000, guid: d0ada58bd4fd71049b345bc22069f3c2, type: 2}
+  - {fileID: 11400000, guid: d0ada58bd4fd71049b345bc22069f3c2, type: 2}
+  - {fileID: 11400000, guid: aeb96637f02481746815b38883a1fa05, type: 2}
+  - {fileID: 11400000, guid: aeb96637f02481746815b38883a1fa05, type: 2}
+  - {fileID: 11400000, guid: aeb96637f02481746815b38883a1fa05, type: 2}
+  - {fileID: 11400000, guid: aeb96637f02481746815b38883a1fa05, type: 2}

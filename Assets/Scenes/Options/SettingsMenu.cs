@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro; 
 public class SettingsMenu : MonoBehaviour
 {
@@ -96,5 +97,10 @@ public class SettingsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullScreen;
         PlayerPrefs.SetInt("FullScreen", isFullScreen ? 1:0) ;
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(1);
     }
 }
