@@ -28,5 +28,20 @@ public class Card : ScriptableObject
 
     public int DamageOnBadResult;
 
+    public TargetingType tipoTarget;
 
 }
+
+public enum TargetingType
+{
+    TargetCreature,
+    TargetAlly,
+    AllAllies,
+    AllEnemies,
+    Both,
+    Nothing,
+    ClueTarget
+    
+
+}
+

@@ -11,9 +11,12 @@ public class Character : ScriptableObject
     //public int Agility;
     //public int Wisdom;
     //public int Observation;
-
+    
     public string Text;
     public Sprite CharacterModel;
     public List<Card> Deck;
+
+    public int Salud;
+    
 }
 
