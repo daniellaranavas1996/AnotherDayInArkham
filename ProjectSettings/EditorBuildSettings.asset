@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Splash/Splash.unity
     guid: 116890d43975ce04f87aa53eab933ac7
   - enabled: 1
-    path: Assets/Scenes/MainMenu/MainMenu.unity
+    path: Assets/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Options/OptionsMenu.unity
+    path: Assets/OptionsMenu.unity
     guid: e02987aeb1e28f049aa79bc9b371c96a
   - enabled: 1
-    path: Assets/Scenes/SelectionCharacter/CharacterSelection.unity
+    path: Assets/CharacterSelection.unity
     guid: 4743d93f4f1d62e4195b820899ac6264
   - enabled: 1
-    path: Assets/Scenes/CombatTable/CombatScene.unity
-    guid: 79566ebb060561542820db1ceb5cbc94
+    path: Assets/CombatScene3.unity
+    guid: 632b8d904db4e8944aed8a1e789453bd
   m_configObjects: {}

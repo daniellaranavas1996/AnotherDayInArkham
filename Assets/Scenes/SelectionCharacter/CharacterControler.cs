@@ -76,7 +76,7 @@ public class CharacterControler : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene("CombatScene");
+        SceneManager.LoadScene("CombatScene3");
 
        
     }
