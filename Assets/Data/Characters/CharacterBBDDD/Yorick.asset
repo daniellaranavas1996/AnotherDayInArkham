@@ -40,3 +40,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f9e8c1c02282374b8f477299c1704a4, type: 2}
   - {fileID: 11400000, guid: 7f9e8c1c02282374b8f477299c1704a4, type: 2}
   Salud: 33
+  SaludActual: 33

@@ -40,8 +40,7 @@ public class CardDisplay : MonoBehaviour
 
         if (PreviewObject != null)
         {
-            // this is a card and not a preview
-            // Preview GameObject will have OneCardManager as well, but PreviewManager should be null there
+
             PreviewObject.card = card;
             PreviewObject.LoadFromAsset();
         }

@@ -17,6 +17,7 @@ public class Character : ScriptableObject
     public List<Card> Deck;
 
     public int Salud;
+    public int SaludActual;
     
 }
 
