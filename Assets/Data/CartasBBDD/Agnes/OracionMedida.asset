@@ -16,7 +16,7 @@ MonoBehaviour:
   description: "Roba 2 cartas *Contrapartida* 1 de da\xF1o."
   artwork: {fileID: 21300000, guid: c7fcb5fa47309e04aa3c7583ed8dc2c7, type: 3}
   Energy: 0
-  AmountToDamage: 0
+  AmountToDamage: 1
   AmountToInvestigate: 0
   AmountToHealToAlly: 0
   AmountToProtect: 0

@@ -10,6 +10,12 @@ public class CardDisplay : MonoBehaviour
     // Start is called before the first frame update
     
     public Card card;
+
+    public CardDisplay(Card card)
+    {
+        this.card = card;
+    }
+
     [SerializeField] public TextMeshProUGUI nametext;
     [SerializeField] public TextMeshProUGUI description;
     [SerializeField] public TextMeshProUGUI energy;
@@ -31,7 +37,7 @@ public class CardDisplay : MonoBehaviour
 
     }
 
-    private void LoadFromAsset()
+    public  void LoadFromAsset()
     {
         nametext.text = card.name.ToString();
         energy.text = card.Energy.ToString();

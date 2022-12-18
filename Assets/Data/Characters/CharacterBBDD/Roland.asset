@@ -18,21 +18,25 @@ MonoBehaviour:
     en cualquier situaci\xF3n dada. Pero \xFAltimamente, su Manual del Agente Federal
     hab\xEDa sido completamente in\xFAtil dados los casos que le hab\xEDan asignado. "
   CharacterModel: {fileID: 21300000, guid: f0c1526ddd4d0e64182ba219793933d9, type: 3}
-  Deck:
-  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
-  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
-  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
-  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
+  RipModel: {fileID: 21300000, guid: ecacbd0ff8afd2546bb5fb4605c3dc5a, type: 3}
+  FixedDeck:
+  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
+  - {fileID: 11400000, guid: 9fc9cf6c67534554b81be31ef8c971cc, type: 2}
   - {fileID: 11400000, guid: 72eb048f9f5d07f43add6b7f7f74a40b, type: 2}
+  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
+  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
+  - {fileID: 11400000, guid: 9fc9cf6c67534554b81be31ef8c971cc, type: 2}
   - {fileID: 11400000, guid: 72eb048f9f5d07f43add6b7f7f74a40b, type: 2}
-  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
-  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
-  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
-  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
+  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
   - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
   - {fileID: 11400000, guid: 9fc9cf6c67534554b81be31ef8c971cc, type: 2}
-  - {fileID: 11400000, guid: 9fc9cf6c67534554b81be31ef8c971cc, type: 2}
-  - {fileID: 11400000, guid: 9fc9cf6c67534554b81be31ef8c971cc, type: 2}
-  - {fileID: 11400000, guid: 9fc9cf6c67534554b81be31ef8c971cc, type: 2}
+  - {fileID: 11400000, guid: 72eb048f9f5d07f43add6b7f7f74a40b, type: 2}
+  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
+  - {fileID: 11400000, guid: 4d2b2daf82bda244eaa20bdb078e65e3, type: 2}
+  - {fileID: 11400000, guid: 72eb048f9f5d07f43add6b7f7f74a40b, type: 2}
+  - {fileID: 11400000, guid: f875e4ffa1b501c41b25af54355f119f, type: 2}
+  Deck: []
+  DiscardDeck: []
+  AlreadyInHand: []
   Salud: 38
   SaludActual: 38

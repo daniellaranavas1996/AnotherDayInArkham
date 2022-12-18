@@ -8,9 +8,14 @@ public class DraggingActionsTestReturn : DraggingActionsTest
 
     public DG.Tweening.Ease TypeBouncing;
 
+    private bool doingMove = false;
     public override void OnStartDrag()
     {
-        savedPos = transform.position;
+        if (!doingMove)
+        {
+            savedPos = transform.position;
+            doingMove = true;
+        }
     }
 
     public override void OnEndDrag()
@@ -18,14 +23,25 @@ public class DraggingActionsTestReturn : DraggingActionsTest
 
        //Según el efecto que queramos hará el efecto de "rebote" o deslizamiento.
        //Hay que controlar que una vez haga la acción no haga el OnEndDrag si no se descarte la carta.
+
+
        transform.DOMove(savedPos, 1f).SetEase(TypeBouncing, 0.5f, 0.1f);
-      
+        doingMove = false;
     }
 
-    public override void OnDraggingInUpdate(){}
+    public override void OnDraggingInUpdate(){
+        if (true)
+        {
+
+        }
+    
+    }
 
     protected override bool DragSuccessful()
     {
         return true;
     }
+
+
+
 }

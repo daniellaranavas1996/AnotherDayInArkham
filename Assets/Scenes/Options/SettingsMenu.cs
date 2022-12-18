@@ -14,7 +14,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private TMPro.TMP_Dropdown dropdown = null;
     [SerializeField] private Toggle toggleFullScreen = null;
 
-
+    [SerializeField] private Canvas canvasToHide;
 
     Resolution[] resolutions;
     private void Start()
@@ -102,5 +102,10 @@ public class SettingsMenu : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void BackButton()
+    {
+        canvasToHide.gameObject.SetActive(false);
     }
 }

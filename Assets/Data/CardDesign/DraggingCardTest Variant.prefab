@@ -17,12 +17,12 @@ PrefabInstance:
     - target: {fileID: 6990711979983065986, guid: 6e3c86d180d3da54a8f118dbb2a4ac82,
         type: 3}
       propertyPath: m_Name
-      value: DraggingCardTest
+      value: DraggingCardTest Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6990711979983065987, guid: 6e3c86d180d3da54a8f118dbb2a4ac82,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6990711979983065987, guid: 6e3c86d180d3da54a8f118dbb2a4ac82,
         type: 3}
@@ -77,3 +77,21 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e3c86d180d3da54a8f118dbb2a4ac82, type: 3}
+--- !u!1 &311968720707004689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6990711979060488278, guid: 6e3c86d180d3da54a8f118dbb2a4ac82,
+    type: 3}
+  m_PrefabInstance: {fileID: 7302492682917626183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &6493108520001324500
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311968720707004689}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0

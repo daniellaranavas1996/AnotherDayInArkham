@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
-public class DraggableTestWithActions : MonoBehaviour {
+public class DraggableTestWithActions : MonoBehaviour
+{
 
     public bool UsePointerDisplacement = true;
     // PRIVATE FIELDS
@@ -17,6 +19,13 @@ public class DraggableTestWithActions : MonoBehaviour {
     // distance from camera to mouse on Z axis 
     private float zDisplacement;
 
+    public BoxCollider2D box;
+
+    public LayerMask EnemyMask;
+
+    public TurnManagerController tmanager;
+
+    private static System.Random rng = new System.Random(System.Convert.ToInt32(System.DateTime.Now.ToString("ddhhmmss")));
     // MONOBEHAVIOUR METHODS
     void Awake()
     {
@@ -25,6 +34,10 @@ public class DraggableTestWithActions : MonoBehaviour {
 
     void OnMouseDown()
     {
+        if (tmanager.youWin || tmanager.youWin)
+        {
+            return;
+        }
         if (da.CanDrag)
         {
             dragging = true;
@@ -38,25 +51,184 @@ public class DraggableTestWithActions : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (dragging)
-        { 
+        {
             Vector3 mousePos = MouseInWorldCoords();
             da.OnDraggingInUpdate();
             //Debug.Log(mousePos);
-            transform.position = new Vector3(mousePos.x - pointerDisplacement.x, mousePos.y - pointerDisplacement.y, transform.position.z);   
+            transform.position = new Vector3(mousePos.x - pointerDisplacement.x, mousePos.y - pointerDisplacement.y, transform.position.z);
         }
     }
 
     void OnMouseUp()
     {
+
+        if (tmanager.youWin || tmanager.youLose)
+        {
+            return;
+        }
         if (dragging)
         {
-            dragging = false;
-            da.OnEndDrag();
+
+
+            Ray ray = new Ray(transform.position, transform.forward);
+            RaycastHit hitData;
+            Physics.Raycast(ray, out hitData);
+            bool resolved = false;
+            if (hitData.collider != null)
+            {
+                Debug.Log("HIT HIT HIT " + hitData.collider.name);
+
+                Card card = gameObject.GetComponent<CardDisplay>().card;
+
+                if (card.Energy <= tmanager.energyQty)
+                {
+                    if ((card.tipoTarget == TargetingType.AllEnemies || card.tipoTarget == TargetingType.TargetCreature) && hitData.collider.name.Contains("Enemigo"))
+                    {
+                        GameObject enemy = hitData.collider.gameObject;
+                        enemy.GetComponent<EnemyDisplay>().Enemy.SaludActual -= card.AmountToDamage;
+                        enemy.GetComponent<EnemyDisplay>().RefreshFromAsset();
+                        resolved = true;
+
+                        if (card.BadResultOnPair)
+                        {
+                            int flipCoin = rng.Next(1,1000) % 2;
+                            if (flipCoin == 1) //badresult y hacer daño
+                            {
+
+                                SelectionData.CharacterSelected1.SaludActual -= card.DamageOnBadResult;
+                                SelectionData.CharacterSelected2.SaludActual -= card.DamageOnBadResult;
+
+                                tmanager.RefreshCharacterData();
+                            }
+                        }
+
+
+                    }
+
+                    if ((card.tipoTarget == TargetingType.AllAllies || card.tipoTarget == TargetingType.TargetAlly) && hitData.collider.name.Contains("Player"))
+                    {
+                        
+                        if (card.tipoTarget == TargetingType.TargetAlly)
+                        {
+                            if (hitData.collider.name.Contains("Player1"))
+                            {
+
+                                if ((SelectionData.CharacterSelected1.SaludActual + card.AmountToHealToAlly) >= SelectionData.CharacterSelected1.Salud)
+                                {
+                                    SelectionData.CharacterSelected1.SaludActual += card.AmountToHealToAlly;
+                                }
+                                else
+                                {
+                                    SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
+                                }
+
+
+                                SelectionData.CharacterSelected1.SaludActual += card.AmountToProtect;
+                            }
+                            else
+                            {
+
+                                if ((SelectionData.CharacterSelected2.SaludActual + card.AmountToHealToAlly) >= SelectionData.CharacterSelected2.Salud)
+                                {
+
+                                    SelectionData.CharacterSelected2.SaludActual += card.AmountToHealToAlly;
+                                }
+                                else
+                                {
+                                    SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
+                                }
+
+                                SelectionData.CharacterSelected2.SaludActual += card.AmountToProtect;
+                            }
+                        }
+                        if (card.tipoTarget == TargetingType.AllAllies)
+                        {
+
+                            if ((SelectionData.CharacterSelected1.SaludActual + card.AmountToHealToAlly) <= SelectionData.CharacterSelected1.Salud)
+                            {
+                                SelectionData.CharacterSelected1.SaludActual += card.AmountToHealToAlly;
+                            }
+                            else
+                            {
+                                SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
+                            }
+
+                            if ((SelectionData.CharacterSelected2.SaludActual + card.AmountToHealToAlly) <= SelectionData.CharacterSelected2.Salud)
+                            {
+
+                                SelectionData.CharacterSelected2.SaludActual += card.AmountToHealToAlly;
+                            }
+                            else
+                            {
+                                SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
+                            }
+
+                                 
+                            
+                            
+                            SelectionData.CharacterSelected1.SaludActual += card.AmountToProtect;                       
+                            SelectionData.CharacterSelected2.SaludActual += card.AmountToProtect;
+
+
+                        }
+
+                        if (card.BadResultOnPair)
+                        {
+                            int flipCoin = rng.Next(1, 1000) % 2;
+                            if (flipCoin == 1) //badresult y hacer daño
+                            {
+
+                                SelectionData.CharacterSelected1.SaludActual -= card.DamageOnBadResult;
+                                SelectionData.CharacterSelected2.SaludActual -= card.DamageOnBadResult;
+
+
+                            }
+                        }
+
+                        tmanager.RefreshCharacterData();
+                            resolved = true;
+
+
+
+                    }
+
+
+                    if (resolved)
+                    {
+                        tmanager.AjustaEnergia(card.Energy);
+                        Destroy(this.gameObject);
+                    }
+
+                    tmanager.checkIfWin();
+
+                }
+
+              
+
+
+                dragging = false;
+                
+                 da.OnEndDrag();
+
+
+            
+
+
+            }
+            else
+            {
+                dragging = false;
+                da.OnEndDrag();
+
+            }
+
+
+
         }
-    }   
+    }
 
     // returns mouse position in World coordinates for our GameObject to follow. 
     private Vector3 MouseInWorldCoords()
@@ -66,4 +238,8 @@ public class DraggableTestWithActions : MonoBehaviour {
         screenMousePos.z = zDisplacement;
         return Camera.main.ScreenToWorldPoint(screenMousePos);
     }
+
+
+
+
 }

@@ -17,21 +17,25 @@ MonoBehaviour:
     hab\xEDa sentido que los libros eran lo m\xE1s importante en su vida. Explor\xF3
     en la ficci\xF3n lo que aborrec\xEDa en vida: el horror, la violencia, el miedo."
   CharacterModel: {fileID: 21300000, guid: f8963c12bc3c8c34fb638ad5c2b91252, type: 3}
-  Deck:
+  RipModel: {fileID: 21300000, guid: ecacbd0ff8afd2546bb5fb4605c3dc5a, type: 3}
+  FixedDeck:
+  - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
+  - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
+  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
+  - {fileID: 11400000, guid: 75e947fd04b570f45becf24f2851d287, type: 2}
+  - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
+  - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
+  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
   - {fileID: 11400000, guid: 75e947fd04b570f45becf24f2851d287, type: 2}
   - {fileID: 11400000, guid: 75e947fd04b570f45becf24f2851d287, type: 2}
-  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
-  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
-  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
-  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
-  - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
-  - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
-  - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
   - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
   - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
+  - {fileID: 11400000, guid: 75e947fd04b570f45becf24f2851d287, type: 2}
+  - {fileID: 11400000, guid: 7d633dcad1dcc4d4f8643f74c3613cda, type: 2}
   - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
-  - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
-  - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
-  - {fileID: 11400000, guid: de57f111cf6098f468d944a9b8b4b5fe, type: 2}
+  - {fileID: 11400000, guid: 44ee8b7d341dbd843b8f51333f187c3b, type: 2}
+  Deck: []
+  DiscardDeck: []
+  AlreadyInHand: []
   Salud: 26
   SaludActual: 26
