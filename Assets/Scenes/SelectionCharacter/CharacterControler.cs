@@ -12,6 +12,7 @@ public class CharacterControler : MonoBehaviour
     [SerializeField] List<string> SelectedCharacters;
     [SerializeField] Button botonComenzar;
     [SerializeField] Character[] charactersDeck;
+    [SerializeField] GameObject[] PanelArray;
     private int GetSelectedCount()
     {
         return isSelected.Where(x => x == true).Count();
@@ -30,6 +31,7 @@ public class CharacterControler : MonoBehaviour
         {
             isSelected[index] = false;            
             imagesSelecteds[index].color = new Color(0.5f, 0.5f, 0.5f);
+            PanelArray[index].SetActive(false);
 
         }
         else
@@ -38,6 +40,7 @@ public class CharacterControler : MonoBehaviour
             {
                 isSelected[index] = true;
                 imagesSelecteds[System.Int32.Parse(button.tag)].color = new Color(255, 255, 255);
+                PanelArray[System.Int32.Parse(button.tag)].SetActive(true);
 
             }
          
@@ -76,7 +79,10 @@ public class CharacterControler : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene("CombatScene3");
+        //Limpiamos config mapa para regenerarlo
+        PlayerPrefs.DeleteKey("Map");
+
+        SceneManager.LoadScene("MapScene");
 
        
     }

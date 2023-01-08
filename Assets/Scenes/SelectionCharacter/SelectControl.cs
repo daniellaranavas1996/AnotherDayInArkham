@@ -8,10 +8,11 @@ public class SelectControl : MonoBehaviour
 
     [SerializeField] RawImage imgCharacter;
     [SerializeField] bool isSelected;
-
+   public GameObject panelToHide;
 
     private void Start()
     {
+        panelToHide.gameObject.active = false;
         isSelected = false;
     }
     public void OnClickCharacter()
@@ -20,11 +21,13 @@ public class SelectControl : MonoBehaviour
         {
             isSelected = false;
             imgCharacter.color = new Color(0.5f, 0.5f, 0.5f);
+            panelToHide.gameObject.active = false;
         }
         else
         {
             isSelected = true;
             imgCharacter.color = new Color(255, 255, 255);
+            panelToHide.gameObject.active = false;
         }    
 
 

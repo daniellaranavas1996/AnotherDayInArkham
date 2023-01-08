@@ -88,6 +88,11 @@ public class DraggableTestWithActions : MonoBehaviour
                     if ((card.tipoTarget == TargetingType.AllEnemies || card.tipoTarget == TargetingType.TargetCreature) && hitData.collider.name.Contains("Enemigo"))
                     {
                         GameObject enemy = hitData.collider.gameObject;
+                        if (enemy.GetComponent<EnemyDisplay>().Enemy.SaludActual <= 0)
+                        {
+                            resolved = false;
+                            return;
+                        }
                         enemy.GetComponent<EnemyDisplay>().Enemy.SaludActual -= card.AmountToDamage;
                         enemy.GetComponent<EnemyDisplay>().RefreshFromAsset();
                         resolved = true;

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Resources/Splash/Splash.unity
+    path: Assets/Splash.unity
     guid: 116890d43975ce04f87aa53eab933ac7
   - enabled: 1
     path: Assets/MainMenu.unity
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CharacterSelection.unity
     guid: 4743d93f4f1d62e4195b820899ac6264
+  - enabled: 1
+    path: Assets/MapScene.unity
+    guid: 4e4b56f4686c2b946962171912138606
   - enabled: 1
     path: Assets/CombatScene3.unity
     guid: 632b8d904db4e8944aed8a1e789453bd

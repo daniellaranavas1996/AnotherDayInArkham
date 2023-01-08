@@ -19,8 +19,8 @@ public class CharacterLoadScript : MonoBehaviour
         if (gameObject.name == "ObjectPlayer1")
         {
 
-
-            SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
+           
+            //SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
             new LoadCharacterCommand(gameObject.name, SelectionData.CharacterSelected1, ImageCharacter, TextHP, Slide).AddToQueue();
 
         }
@@ -28,7 +28,7 @@ public class CharacterLoadScript : MonoBehaviour
         {
 
 
-            SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
+            //SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
             new LoadCharacterCommand(gameObject.name, SelectionData.CharacterSelected2, ImageCharacter, TextHP, Slide).AddToQueue();
 
         }

@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using DG.Tweening;
 public class TurnManagerController : MonoBehaviour
 {
     [Header("Energia")]
@@ -54,6 +55,7 @@ public class TurnManagerController : MonoBehaviour
 
             TurnBoxPlayer.SetActive(true);
             WaitForSeconds w = new WaitForSeconds(2);
+            
             TurnBoxPlayer.SetActive(false);
 
 
@@ -163,14 +165,36 @@ public class TurnManagerController : MonoBehaviour
 
             HasPerdidoBox.SetActive(true);
 
+            StartCoroutine(WaitForUnscaledSeconds(2000f));
+            SceneManager.LoadScene("MainMenu");
+
         }
         else if (!EnemiesStillAlive)
         {
             youWin = true;
             hmanager.ClearHands();
+
             HasGanadoBox.SetActive(true);
+            StartCoroutine(WaitForUnscaledSeconds(2000f));
+         
+
+            SceneManager.LoadScene("MapScene");
 
         }
+    }
+    public static IEnumerator WaitForUnscaledSeconds(float time)
+    {
+        float ttl = 0;
+        while (time > ttl)
+        {
+            ttl += Time.unscaledDeltaTime;
+            yield return null;
+        }
+    }
+    public IEnumerator GamePauseXSeconds(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+
     }
 
     public void RefreshCharacterData()

@@ -30,6 +30,7 @@ public class LoadCharacterCommand : Command
         if (ObjectName == "ObjectPlayer1")
         {
             LoadedCharacter = SelectionData.CharacterSelected1;
+
         }
         else
         {

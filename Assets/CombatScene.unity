@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25deb091129efc7468161def82273cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jugador1: {fileID: 1558498819}
-  Jugador2: {fileID: 1375058223}
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
 --- !u!1 &338267535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,8 +2107,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824384971}
   m_CullTransparentMesh: 1
---- !u!4 &2051202417 stripped
-Transform:
+--- !u!224 &2051202417 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 311968721629647556, guid: a580d7b3aa4b51e42b2802f21b54038e,
     type: 3}
   m_PrefabInstance: {fileID: 2123818572}
