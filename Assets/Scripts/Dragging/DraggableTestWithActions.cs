@@ -79,7 +79,7 @@ public class DraggableTestWithActions : MonoBehaviour
             bool resolved = false;
             if (hitData.collider != null)
             {
-                Debug.Log("HIT HIT HIT " + hitData.collider.name);
+                Debug.Log("HUBO HIT HIT HIT " + hitData.collider.name);
 
                 Card card = gameObject.GetComponent<CardDisplay>().card;
 
@@ -113,38 +113,58 @@ public class DraggableTestWithActions : MonoBehaviour
 
                     }
 
+                    if (card.AmountToInvestigate > 0)
+                    {
+
+                        GameObject zoneClues = tmanager.ZonaClues;
+                        zoneClues.gameObject.GetComponent<LoadInvestigateController>();
+                        zoneClues.GetComponent<LoadInvestigateController>().pistas -= card.AmountToInvestigate;
+                        zoneClues.GetComponent<LoadInvestigateController>().CompruebaPistas();
+                        resolved = true;
+                    }
+
+
                     if ((card.tipoTarget == TargetingType.AllAllies || card.tipoTarget == TargetingType.TargetAlly) && hitData.collider.name.Contains("Player"))
                     {
                         
                         if (card.tipoTarget == TargetingType.TargetAlly)
                         {
+
                             if (hitData.collider.name.Contains("Player1"))
                             {
-
-                                if ((SelectionData.CharacterSelected1.SaludActual + card.AmountToHealToAlly) >= SelectionData.CharacterSelected1.Salud)
+                                if (card.AmountToHealToAlly > 0)
                                 {
-                                    SelectionData.CharacterSelected1.SaludActual += card.AmountToHealToAlly;
+                                    if ((SelectionData.CharacterSelected1.SaludActual + card.AmountToHealToAlly) >= SelectionData.CharacterSelected1.Salud)
+                                    {
+                                        SelectionData.CharacterSelected1.SaludActual += card.AmountToHealToAlly;
+                                    }
+                                    else
+                                    {
+                                        SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
+                                    }
                                 }
-                                else
-                                {
-                                    SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
-                                }
+                          
 
-
+                                //PROTEGER SIEMPPRE PONDRÁ VIDA DE MÁS
                                 SelectionData.CharacterSelected1.SaludActual += card.AmountToProtect;
                             }
                             else
                             {
-
-                                if ((SelectionData.CharacterSelected2.SaludActual + card.AmountToHealToAlly) >= SelectionData.CharacterSelected2.Salud)
+                                if (card.AmountToHealToAlly > 0)
                                 {
 
-                                    SelectionData.CharacterSelected2.SaludActual += card.AmountToHealToAlly;
+                                    if ((SelectionData.CharacterSelected2.SaludActual + card.AmountToHealToAlly) >= SelectionData.CharacterSelected2.Salud)
+                                    {
+
+                                        SelectionData.CharacterSelected2.SaludActual += card.AmountToHealToAlly;
+                                    }
+                                    else
+                                    {
+                                        SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
+                                    }
+
                                 }
-                                else
-                                {
-                                    SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
-                                }
+                                    
 
                                 SelectionData.CharacterSelected2.SaludActual += card.AmountToProtect;
                             }

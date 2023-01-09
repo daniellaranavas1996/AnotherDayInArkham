@@ -21,6 +21,8 @@ public class TurnManagerController : MonoBehaviour
     public GameObject HasGanadoBox;
     public GameObject HasPerdidoBox;
 
+    public GameObject ZonaClues;
+
     public HandManager hmanager;
     private static System.Random rng = new System.Random(System.Convert.ToInt32(System.DateTime.Now.ToString("ddhhmmss")));
    
