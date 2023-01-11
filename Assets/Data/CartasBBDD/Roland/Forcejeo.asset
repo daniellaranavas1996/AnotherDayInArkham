@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Forcejeo
   m_EditorClassIdentifier: 
   name: Forcejeo
-  description: "Le inflinges al enemigo 3 de da\xF1o y robas 1 carta."
+  description: "Le haces 3 de da\xF1o y investigas 1 pista."
   artwork: {fileID: 21300000, guid: f0c1526ddd4d0e64182ba219793933d9, type: 3}
   Energy: 0
   AmountToDamage: 3
-  AmountToInvestigate: 0
+  AmountToInvestigate: 1
   AmountToHealToAlly: 0
   AmountToProtect: 0
-  AmountToDraw: 1
+  AmountToDraw: 0
   BadResultOnPair: 0
   DamageOnBadResult: 0
+  tipoTarget: 0

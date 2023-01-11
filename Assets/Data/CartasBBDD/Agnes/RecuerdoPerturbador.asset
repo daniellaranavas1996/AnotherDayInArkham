@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: RecuerdoPerturbador
   m_EditorClassIdentifier: 
   name: Recuerdo perturbador
-  description: "Realiza 8 de da\xF1o *Contrapartida* 2 de da\xF1o"
+  description: "Investiga 5 pistas *Contrapartida* 2 de da\xF1o"
   artwork: {fileID: 21300000, guid: c7fcb5fa47309e04aa3c7583ed8dc2c7, type: 3}
   Energy: 1
-  AmountToDamage: 8
-  AmountToInvestigate: 0
+  AmountToDamage: 0
+  AmountToInvestigate: 5
   AmountToHealToAlly: 0
   AmountToProtect: 0
   AmountToDraw: 0
   BadResultOnPair: 1
   DamageOnBadResult: 2
+  tipoTarget: 0

@@ -10,14 +10,23 @@ public class LoadInvestigateController : MonoBehaviour
     public GameObject panelHuir;
     public GameObject panelInvestigar;
     public int pistas;
-
+    public bool BossFight;
     public TMPro.TextMeshProUGUI CampoTextoPistas;
 
     private static System.Random rng = new System.Random(System.Convert.ToInt32(System.DateTime.Now.ToString("ddhhmmss")));
 
     void Start()
     {
-        pistas = rng.Next(8, 25);
+        if (!BossFight)
+        {
+            pistas = rng.Next(10, 25);
+
+        }
+        else
+        {
+            pistas = rng.Next(25, 50);
+
+        }
         CampoTextoPistas.text = $"{pistas} PISTAS";
     }
 

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CombatScene3.unity
     guid: 632b8d904db4e8944aed8a1e789453bd
+  - enabled: 1
+    path: Assets/BossCombat.unity
+    guid: 8ce5b6a2f0293ed4aa4836989027aa3e
   m_configObjects: {}

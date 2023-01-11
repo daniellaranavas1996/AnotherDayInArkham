@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GolpeDecisivo
   m_EditorClassIdentifier: 
   name: "\xA1Golpe Decisivo!"
-  description: "Gasta 2 de energ\xEDa. Le hace al enemigo 10 de da\xF1o."
+  description: "Le hace al enemigo 10 de da\xF1o."
   artwork: {fileID: 21300000, guid: f0c1526ddd4d0e64182ba219793933d9, type: 3}
   Energy: 2
   AmountToDamage: 10
@@ -23,3 +23,4 @@ MonoBehaviour:
   AmountToDraw: 0
   BadResultOnPair: 0
   DamageOnBadResult: 0
+  tipoTarget: 0

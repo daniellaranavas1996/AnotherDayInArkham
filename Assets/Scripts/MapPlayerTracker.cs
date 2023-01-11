@@ -13,6 +13,13 @@ namespace Map
         public MapManager mapManager;
         public MapView view;
 
+
+        //public GameObject ZonaPlayers;
+        public GameObject Player1;
+        public GameObject Player2;
+
+
+
         public static MapPlayerTracker Instance;
 
         public bool Locked { get; set; }
@@ -58,7 +65,7 @@ namespace Map
             mapNode.ShowSwirlAnimation();
 
             DOTween.Sequence().AppendInterval(enterNodeDelay).OnComplete(() => EnterNode(mapNode));
-
+            
             mapManager.SaveMap();
         }
 
@@ -82,13 +89,25 @@ namespace Map
                     break;
                 case NodeType.RestSite:
                     Debug.Log("Entrar en hospital");
+
+                    SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
+                    SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
+
+                    Instance.Player1.gameObject.GetComponent<CharacterLoadScript>().LoadFromAsset();
+                    Instance.Player2.gameObject.GetComponent<CharacterLoadScript>().LoadFromAsset();
+                    Instance.Locked = false;
+
                     break;
                 case NodeType.Treasure:
                     break;
                 case NodeType.Store:
-                    Debug.Log("Entrar en tienda");
+                    Debug.Log("Entrar en tienda, futura implementación");
+                    Instance.Locked = false;
                     break;
                 case NodeType.Boss:
+                    Debug.Log("Entrar en combate");
+                    SceneManager.LoadScene("BossCombat");
+                    
                     break;
                 case NodeType.Mystery:
                     break;

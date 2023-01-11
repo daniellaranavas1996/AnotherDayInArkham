@@ -69,11 +69,14 @@ public class CharacterControler : MonoBehaviour
             {
                 if (SelectionData.CharacterSelected1 == null)
                 {
+
                     SelectionData.CharacterSelected1 = charactersDeck[i];
+                    SelectionData.CharacterSelected1.SaludActual = SelectionData.CharacterSelected1.Salud;
                 }
                 else
                 {
                     SelectionData.CharacterSelected2 = charactersDeck[i];
+                    SelectionData.CharacterSelected2.SaludActual = SelectionData.CharacterSelected2.Salud;
                 }
 
             }

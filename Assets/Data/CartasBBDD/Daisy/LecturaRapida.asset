@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5152e48f13e0bff4d83b5978eeeb573c, type: 3}
   m_Name: LecturaRapida
   m_EditorClassIdentifier: 
-  name: "Lectura r\xE1pida"
-  description: Roba 2 cartas
+  name: "Conocimiento m\xE9dico"
+  description: Cura 2 a tus aliados
   artwork: {fileID: 21300000, guid: f8963c12bc3c8c34fb638ad5c2b91252, type: 3}
   Energy: 1
   AmountToDamage: 0
   AmountToInvestigate: 0
-  AmountToHealToAlly: 0
+  AmountToHealToAlly: 4
   AmountToProtect: 0
-  AmountToDraw: 2
+  AmountToDraw: 0
   BadResultOnPair: 0
   DamageOnBadResult: 0
-  tipoTarget: 5
+  tipoTarget: 2

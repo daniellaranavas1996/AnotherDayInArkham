@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ServirYProteger
   m_EditorClassIdentifier: 
   name: Servir y proteger
-  description: Protege a un aliado (4) y investiga 2 pistas.
+  description: Protege a un aliado 4 y investiga 2 pistas.
   artwork: {fileID: 21300000, guid: f0c1526ddd4d0e64182ba219793933d9, type: 3}
   Energy: 1
   AmountToDamage: 0

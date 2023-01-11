@@ -16,7 +16,7 @@ public class TurnManagerController : MonoBehaviour
     public CharacterLoadScript[] PlayerObjects;
     [Header("Mensajes de turno")]
     public GameObject TurnBoxPlayer;
-    public GameObject EnemyBoxPlayer; 
+    public GameObject EnemyBoxPlayer;
 
     public GameObject HasGanadoBox;
     public GameObject HasPerdidoBox;
@@ -25,9 +25,9 @@ public class TurnManagerController : MonoBehaviour
 
     public HandManager hmanager;
     private static System.Random rng = new System.Random(System.Convert.ToInt32(System.DateTime.Now.ToString("ddhhmmss")));
-   
-   public bool youWin = false;
-   public bool youLose = false;
+
+    public bool youWin = false;
+    public bool youLose = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +49,7 @@ public class TurnManagerController : MonoBehaviour
         if (!PlayerTurn)
 
         {
-            PlayerTurn = true;          
+            PlayerTurn = true;
             RenuevaEnergia();
             Character character1 = SelectionData.CharacterSelected1;
             Character character2 = SelectionData.CharacterSelected2;
@@ -57,7 +57,7 @@ public class TurnManagerController : MonoBehaviour
 
             TurnBoxPlayer.SetActive(true);
             WaitForSeconds w = new WaitForSeconds(2);
-            
+
             TurnBoxPlayer.SetActive(false);
 
 
@@ -86,21 +86,21 @@ public class TurnManagerController : MonoBehaviour
 
 
 
-        }
+    }
 
     private void DoIAMove()
     {
         rng = new System.Random(System.Convert.ToInt32(System.DateTime.Now.ToString("ddhhmmss")));
         foreach (GameObject item in EnemigosObject)
         {
-            if (item.activeSelf)
+            if (item.active)
             {
                 Enemy en = item.GetComponent<EnemyDisplay>().Enemy;
-                if (en.SaludActual>0)
+                if (en.SaludActual > 0)
                 {
                     int i = rng.Next(0, 1000) % 2;
 
-                    if (i==1)
+                    if (i == 1)
                     {
                         if (SelectionData.CharacterSelected2.SaludActual > 0)
                         {
@@ -126,14 +126,16 @@ public class TurnManagerController : MonoBehaviour
                             SelectionData.CharacterSelected2.SaludActual -= en.Ataque;
                         }
                     }
-                  
+
                     PlayerObjects[0].GetComponent<CharacterLoadScript>().LoadFromAsset();
                     PlayerObjects[1].GetComponent<CharacterLoadScript>().LoadFromAsset();
 
-
                 }
 
+
             }
+
+            
         }
 
 
@@ -145,7 +147,7 @@ public class TurnManagerController : MonoBehaviour
         bool EnemiesStillAlive = false;
         foreach (GameObject item in EnemigosObject)
         {
-            if (item.activeSelf)
+            if (item.active == true)
             {
                 Enemy en = item.GetComponent<EnemyDisplay>().Enemy;
                 if (en.SaludActual > 0)
@@ -153,6 +155,8 @@ public class TurnManagerController : MonoBehaviour
                     EnemiesStillAlive = true;
                 }
             }
+               
+            
         }
 
         if (SelectionData.CharacterSelected1.SaludActual > 0 || SelectionData.CharacterSelected2.SaludActual > 0)
@@ -168,7 +172,7 @@ public class TurnManagerController : MonoBehaviour
             HasPerdidoBox.SetActive(true);
 
             StartCoroutine(WaitForUnscaledSeconds(2000f));
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
 
         }
         else if (!EnemiesStillAlive)
@@ -178,9 +182,9 @@ public class TurnManagerController : MonoBehaviour
 
             HasGanadoBox.SetActive(true);
             StartCoroutine(WaitForUnscaledSeconds(2000f));
-         
 
-            SceneManager.LoadScene("MapScene");
+
+            //SceneManager.LoadScene("MapScene");
 
         }
     }
@@ -229,6 +233,17 @@ public class TurnManagerController : MonoBehaviour
             poolEnergy[i].gameObject.SetActive(false);
 
         }
+
+    }
+    public void IrAlMenuPrincipal()
+    {
+
+        SceneManager.LoadScene("MainMenu");
+
+    }
+    public void IrAlMapaPrincipal()
+    {
+        SceneManager.LoadScene("MapScene");
 
     }
 }

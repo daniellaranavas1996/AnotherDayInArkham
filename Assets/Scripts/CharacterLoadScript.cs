@@ -42,17 +42,14 @@ public class CharacterLoadScript : MonoBehaviour
     {
         if (gameObject.name == "ObjectPlayer1")
         {
-            new LoadCharacterCommand(gameObject.name, SelectionData.CharacterSelected1, ImageCharacter, TextHP, Slide).AddToQueue();            
+            new LoadCharacterCommand(gameObject.name, SelectionData.CharacterSelected1, ImageCharacter, TextHP, Slide).AddToQueue();         
           
         }else
         {
             new LoadCharacterCommand(gameObject.name, SelectionData.CharacterSelected2, ImageCharacter, TextHP, Slide).AddToQueue();
-
         }
-
-
     }
-
+    
 
 
 }
