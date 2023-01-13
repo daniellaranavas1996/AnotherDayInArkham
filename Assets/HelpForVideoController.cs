@@ -1,0 +1,25 @@
+using Map;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HelpForVideoController : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public MapManager mp;
+
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+
+            mp.GenerateNewMap();
+        }
+    }
+}
